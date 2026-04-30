@@ -74,4 +74,16 @@ order by `month`;
 -- D) Can you provide a ranking of in-store sales performance by each store in the sales territory, or a
 -- ranking of online sales performance by state within an online sales territory?
 
+select 
+s.store_id,
+l.storelocation as location,
+count(*) as transactionCount,
+sum(s.sale_amount) as total,
+rank() over (order by sum(s.sale_amount) desc) as salesRank -- shout out to demand planning guy for explaining rank to me
+from store_sales as s
+join store_locations as l on s.store_id = l.storeid
+where l.state = 'new jersey' 
+group by s.store_id, l.storelocation
+order by total desc;
+
 -- E) What is your recommendation for where to focus sales attention in the next quarter?
