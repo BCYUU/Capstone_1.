@@ -37,7 +37,7 @@ group by `month`
 order by `month`;
 
 
---  Provide a comparison of total revenue for the specific sales territory and the region it belongs to. -- I miss read this the first time that was great
+-- Provide a comparison of total revenue for the specific sales territory and the region it belongs to. -- I miss read this the first time that was great
 
 select
 case
@@ -87,3 +87,15 @@ group by s.store_id, l.storelocation
 order by total desc;
 
 -- E) What is your recommendation for where to focus sales attention in the next quarter?
+
+-- Here’s what I’m recommending, and I’m recommending it strongly: Next quarter, we go all in on the high-efficiency winners. 
+-- We shift our best salespeople, our heaviest promotions, and our smartest resources into Cape May, Morristown, Atlantic City, and Montclair. 
+-- These are your gold mines. We dominate these markets where every resident is turning into real revenue.
+-- We keep the big cities grinding on volume, but we stop spreading ourselves thin and start doubling down where the money per person is actually flowing. 
+-- That’s how we blow past targets and make the rest of the Northeast look like they’re standing still.
+
+-- Also I think we keep pushing our categories as is with the only potential change to encourage more tech sales 
+-- as its our biggest in both relative transaction amount and genuine transaction size.
+
+-- Don't want to dedicate more square footage to other items and potentially cannibalize our winners.
+
